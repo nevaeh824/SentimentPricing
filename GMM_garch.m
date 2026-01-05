@@ -28,7 +28,7 @@ ub = [20, 1.0,  20,  10, 10];
 % 均值方程: AR(1), 方差方程: GARCH(1,1)
 Mdl_Spec = arima('ARLags', 1, 'Variance', garch(1,1)); 
 
-for d =1:244
+for d =2
     
     if isnan(t_1(d)) || isnan(t_2(d)) || isnan(t_3(d))
         fprintf('d = %d: 索引为 NaN，跳过此月份。\n', d)
